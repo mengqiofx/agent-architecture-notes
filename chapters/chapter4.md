@@ -29,6 +29,24 @@ LangGraph extends LangChain by introducing a **graph-based state machine** archi
 * **Building the ReAct Loop:**
     * Step-by-step notebook demonstrating a classic ReAct agent built as a simple graph: `START -> LLM_Node -> Conditional_Edge(Tool_Call?) -> Tool_Node -> LLM_Node (Loop) / END`.
 
+### 💡 LangGraph ReAct Agent Diagram (Mermaid)
+
+```mermaid
+graph TD
+    A[Start] --> B(Reasoning);
+    B -- Tool Call (Conditional) --> C[Tool Node];
+    B -- Final Answer (Conditional) --> D[End Node];
+    C -- Tool Feedback --> B;
+
+    style A fill:#f99,stroke:#333,stroke-width:2px;
+    style C fill:#f99,stroke:#333,stroke-width:2px;
+    style D fill:#f99,stroke:#333,stroke-width:2px;
+    style B fill:#9bf,stroke:#333,stroke-width:2px;
+
+    %% Optional: Add labels to match the image's flow types
+    linkStyle 1 stroke:#228B22,stroke-width:2px; %% Tool Feedback (Green)
+    linkStyle 2 stroke-dasharray: 5 5; %% Conditional (Dotted)
+    linkStyle 3 stroke-dasharray: 5 5; %% Conditional (Dotted)
 ---
 
 #### 🔄 **4.3. Advanced Workflows and Features**
