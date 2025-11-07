@@ -43,12 +43,9 @@ graph TD
     style D fill:#f99,stroke:#333,stroke-width:2px;
     style B fill:#9bf,stroke:#333,stroke-width:2px;
 
-    %% Optional: Add labels to match the image's flow types
-    linkStyle 1 stroke:#228B22,stroke-width:2px; %% Tool Feedback (Green)
-    linkStyle 2 stroke-dasharray: 5 5; %% Conditional (Dotted)
-    linkStyle 3 stroke-dasharray: 5 5; %% Conditional (Dotted)
----
-
+    linkStyle 4 stroke:#228B22,stroke-width:2px; 
+    linkStyle 1 stroke-dasharray: 5 5; 
+    linkStyle 2 stroke-dasharray: 5 5;
 #### 🔄 **4.3. Advanced Workflows and Features**
 
 This section explores how LangGraph solves production-level challenges that simple chains cannot:
